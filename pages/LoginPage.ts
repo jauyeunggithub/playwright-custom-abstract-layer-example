@@ -1,16 +1,17 @@
 import { Page } from "playwright";
 import { BasePage } from "./BasePage";
+import * as path from "path";
 
 export class LoginPage extends BasePage {
   constructor(page: Page) {
     super(page);
   }
 
-  // Navigate to the Login page (local HTML file in this case)
   async navigate(): Promise<void> {
-    await this.page.goto("file://" + __dirname + "/login.html"); // Use file path for local HTML
+    const filePath = path.join(__dirname, "../public/login.html");
+    const fileURL = "file://" + filePath.replace(/\\/g, "/");
+    await this.page.goto(fileURL);
   }
-
   // Fill in the login form
   async login(username: string, password: string): Promise<void> {
     await this.type("#username", username);
