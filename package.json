@@ -1,0 +1,27 @@
+{
+  "name": "playwright-custom-abstract-layer-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jauyeunggithub/playwright-custom-abstract-layer-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jauyeunggithub/playwright-custom-abstract-layer-example/issues"
+  },
+  "homepage": "https://github.com/jauyeunggithub/playwright-custom-abstract-layer-example#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "playwright": "^1.54.1"
+  }
+}

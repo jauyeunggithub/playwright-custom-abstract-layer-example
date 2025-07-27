@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .login-container { max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; }
+    .input-field { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; }
+    .button { width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    .button:hover { background-color: #45a049; }
+    .welcome-message { display: none; font-size: 18px; color: green; }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" class="input-field" placeholder="Username">
+    <input type="password" id="password" class="input-field" placeholder="Password">
+    <button id="loginButton" class="button">Login</button>
+    <div id="welcomeMessage" class="welcome-message">Welcome, you are logged in!</div>
+  </div>
+
+  <script>
+    document.getElementById('loginButton').addEventListener('click', function() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === 'testuser' && password === 'password123') {
+        document.getElementById('welcomeMessage').style.display = 'block';
+      } else {
+        alert('Invalid credentials');
+      }
+    });
+  </script>
+
+</body>
+</html>
